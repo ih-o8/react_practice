@@ -21,8 +21,8 @@ function TodoInsert({ addTodo }) {
   return (
     <>
       <form onSubmit={onSubmit}>
-        <input onChange={onChange} value={todo} type="text" placeholder="내용을 입력해주세요"/>
-        <button>+</button>
+        <input className="py-3 pl-11 pr-20 bg-pure-blue text-dark-gray placeholder:text-dark-gray placeholder:text-left" onChange={onChange} value={todo} type="text" placeholder="내용을 입력해주세요"/>
+        <button className="px-5 py-3 text-left bg-somber-blue text-white font-black">+</button>
       </form>
     </>
   );

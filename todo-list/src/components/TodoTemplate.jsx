@@ -16,12 +16,12 @@ function TodoTemplate() {
   }
 
   return (
-    <>
-      <h1>Todo-List</h1>
+    <div className="py-1 rounded-2xl bg-dark-blue">
+      <h1 className="my-5 text-center text-white tracking-widest text-2xl font-black">Todo-List</h1>
       <TodoInsert addTodo={ addTodo }/>
       <TodoList todos={ todos } removeTodo={ removeTodo }/>
-      <p>현재 해야 할 일이 { todos.length }개 남아있습니다.</p>
-    </>
+      <p className="my-5 text-center text-white">현재 해야 할 일이 { todos.length }개 남아있습니다.</p>
+    </div>
   );
 }
 
