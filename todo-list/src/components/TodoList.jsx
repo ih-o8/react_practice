@@ -4,8 +4,8 @@ function TodoList({ todos, removeTodo }) {
 
   return (
     <>
-      {todos.map((todo, index) => (
-        <TodoListItem key={ index } todo={ todo } onDelete={removeTodo}/>
+      {todos.map((todo) => (
+        <TodoListItem key={ todo.id } todo={ todo } onDelete={ removeTodo }/>
       ))}
     </>
   );

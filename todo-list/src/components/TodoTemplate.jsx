@@ -7,12 +7,16 @@ function TodoTemplate() {
 
   // todos에 todo 추가
   function addTodo(newTodo) {
-    setTodos((prev) => [...prev, newTodo]);
+    const newTodoItem = {
+      id: Date.now(),  // 고유한 ID 생성
+      text: newTodo
+    };
+    setTodos((prev) => [...prev, newTodoItem]);
   };
 
   // todos에서 todo 삭제
-  function removeTodo(deleteTodo) {
-    setTodos(todos.filter(todo => todo !== deleteTodo));
+  function removeTodo(deleteId) {
+    setTodos(todos.filter(todo => todo.id !== deleteId));
   }
 
   return (
