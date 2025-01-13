@@ -1,11 +1,14 @@
 import TodoTemplate from "./components/TodoTemplate";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
 
   return (
-    <>
-      <TodoTemplate/>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<TodoTemplate />}/>
+      </Routes>
+    </Router>
   );
 }
 
