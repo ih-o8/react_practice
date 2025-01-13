@@ -8,7 +8,7 @@ function TodoInsert({ addTodo }) {
     setTodo(event.target.value);
   }
 
-  // todo 추가 & 입력창창 초기화
+  // todo 추가 & 입력창 초기화
   function onSubmit(event) {
     event.preventDefault();
     if ( todo === "" ){

@@ -13,7 +13,7 @@ function Posts() {
     })
     .catch(error => {
         console.error("Error fetching posts:", error);
-        setLoading(false);  // 에러 발생 시 로딩 중단단
+        setLoading(false);  // 에러 발생 시 로딩 중단
     });
   }, []);
 
