@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from 'react-router-dom';
 
 function Posts() {
   const [posts, setPosts] = useState([]);
@@ -25,18 +26,20 @@ function Posts() {
     <>
       <div className="py-1 pb-5 rounded-2xl bg-dark-blue">
         <h1 className="mt-5 mb-3 text-center text-white tracking-widest text-2xl font-black">Posts</h1>
-      <ul className="mx-5 text-center">
-        {posts.map((post) => (
-          <li key={ post.id }>
-            <p className="mb-5 text-white font-black">-</p>
-            <h2 className="mb-3 font-semibold text-white">{ post.title }</h2>
-            <p className="mt-1 mb-5 text-white">"{ post.body }"</p>
-          </li>
-        ))}
-      </ul>
+        <ul className="mx-5 text-center">
+          {posts.map((post) => (
+            <li key={ post.id }>
+              <p className="mb-5 text-white font-black">-</p>
+              <Link to={`${post.id}`}>
+                <h2 className="mb-3 font-semibold text-white">{ post.title }</h2>
+                <p className="mt-1 mb-5 text-white">"{ post.body }"</p>
+              </Link>
+            </li>
+          ))}
+        </ul>
         </div>
     </>
   );
 }
   
-  export default Posts;
+export default Posts;
